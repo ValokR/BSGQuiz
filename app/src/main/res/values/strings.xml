@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">How well do you know Battle Star?</string>
+    <string name="submit_buttom">Submit</string>
+    <string name="hint_button">Hint</string>
+    <string name="input_field_hint">Answer</string>
+    <string name="question_label">Question #</string>
+</resources>
