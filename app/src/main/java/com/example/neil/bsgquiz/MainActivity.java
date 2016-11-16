@@ -3,6 +3,7 @@ package com.example.neil.bsgquiz;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,7 +14,10 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] questionHeaders, answerKey, questions;
+    String[] questionHeaders, answerKey, questions, correctAnswerString;
+
+    int correctAnswers = 0;
+    int questionCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +28,11 @@ public class MainActivity extends AppCompatActivity {
         questionHeaders = res.getStringArray(R.array.question_header_array);
         answerKey = res.getStringArray(R.array.answer_key_array);
         questions = res.getStringArray(R.array.questions_array);
+        correctAnswerString = res.getStringArray(R.array.correct_answers);
     }
 
-    int correctAnswers = 0;
-    int questionCounter = 0;
 
-
-    public void submitAnswer() {
+    public void submitAnswer(View view) {
         //create Edit Text object, and extract user input answer from it
         EditText userAnswerEditText = (EditText) findViewById(R.id.answer_text);
         String userAnswer = userAnswerEditText.getText().toString();
@@ -64,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
         //reset hint for EditText
         EditText userAnswerEditText = (EditText) findViewById(R.id.answer_text);
-        userAnswerEditText.setHint("Answer");
+        userAnswerEditText.setHint(R.string.input_field_hint);
 
         //update correct answer counter
-        TextView correctAnswers = (TextView) findViewById(R.id.correct_answer_counter);
-        correctAnswers.setText(correctAnswers + " / 8");
+        TextView correctAnswersTextView = (TextView) findViewById(R.id.correct_answer_counter);
+        correctAnswersTextView.setText(correctAnswerString[correctAnswers]);
 
         questionCounter++;
     }

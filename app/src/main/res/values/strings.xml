@@ -32,7 +32,18 @@
         <item>What famous writer / director said that BSG was their favorite show?</item>
     </string-array>
 
+    <string-array name="correct_answers">
+        <item>0 / 7 correct</item>
+        <item>1 / 7 correct</item>
+        <item>2 / 7 correct</item>
+        <item>3 / 7 correct</item>
+        <item>4 / 7 correct</item>
+        <item>5 / 7 correct</item>
+        <item>6 / 7 correct</item>
+        <item>7 / 7 correct</item>
+    </string-array>
+
     <string name="start_question">What is the name of the settlement on which the cylons attempt to live together with humans?</string>
     <string name="start_question_header">Question #1</string>
-    <string name="start_correct_counter">0 / 8 correct</string>
+    <string name="start_correct_counter">0 / 7 correct</string>
 </resources>
