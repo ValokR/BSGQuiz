@@ -3,5 +3,36 @@
     <string name="submit_buttom">Submit</string>
     <string name="hint_button">Hint</string>
     <string name="input_field_hint">Answer</string>
-    <string name="question_label">Question #</string>
+
+    <string-array name="question_header_array">
+        <item>Question #2</item>
+        <item>Question #3</item>
+        <item>Question #4</item>
+        <item>Question #5</item>
+        <item>Question #6</item>
+        <item>Question #7</item>
+    </string-array>
+
+    <string-array name="answer_key_array">
+        <item>New Caprica</item>
+        <item>Admiral Cain</item>
+        <item>Ellen Tigh</item>
+        <item>Kobol</item>
+        <item>Cylons</item>
+        <item>Husker</item>
+        <item>Joss Whedon</item>
+    </string-array>
+
+    <string-array name="questions_array">
+        <item>Who was the leader of the BattleStar Pegasus?</item>
+        <item>Who was the fifth and final cylon of the final five to be revealed?</item>
+        <item>What is the name of the planet the twelve tribes originally lived on?</item>
+        <item>Who settled on the original \'Earth\'</item>
+        <item>What was Admiral Adama\'s callsign?</item>
+        <item>What famous writer / director said that BSG was their favorite show?</item>
+    </string-array>
+
+    <string name="start_question">What is the name of the settlement on which the cylons attempt to live together with humans?</string>
+    <string name="start_question_header">Question #1</string>
+    <string name="start_correct_counter">0 / 8 correct</string>
 </resources>

@@ -17,22 +17,31 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/question_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="@string/question_label" />
+            android:text="@string/start_question_header" />
 
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Question Text Here"
-            android:inputType="textMultiLine"/>
+            android:text="@string/start_question" />
 
         <EditText
+            android:id="@+id/answer_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_field_hint" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp"
+            android:hint="@string/input_field_hint"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <TextView
@@ -42,17 +51,31 @@
         android:layout_below="@+id/question_layout_view"
         android:textAlignment="center" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="@string/hint_button" />
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/submit_buttom" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hint_button" />
+
+        <TextView
+            android:id="@+id/correct_answer_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/start_correct_counter" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit_buttom"
+            android:onClick="submitAnswer"/>
+    </LinearLayout>
 </RelativeLayout>
