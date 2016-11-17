@@ -23,7 +23,7 @@
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-condensed"
             android:text="@string/start_question_header"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/start_question" />
+            android:text="@string/start_question"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/answer_text"
@@ -39,20 +40,23 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-condensed"
             android:hint="@string/input_field_hint"
-            android:inputType="textMultiLine"
-            android:fontFamily="sans-serif-condensed" />
+            android:inputType="textMultiLine" />
 
         <TextView
             android:id="@+id/hint_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed" />
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="16sp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/bsglogo" />
+            android:layout_marginTop="16dp"
+            android:scaleType="center"
+            android:src="@drawable/bsg_logo" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,7 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="@string/start_correct_counter" />
+            android:text="@string/start_correct_counter"
+            android:fontFamily="sans-serif-condensed"/>
 
         <Button
             android:layout_width="wrap_content"
