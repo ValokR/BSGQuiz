@@ -48,7 +48,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry, That's Incorrect", Toast.LENGTH_SHORT).show();
         }
-        nextQuestion();
+
+        if (questionCounter < 6) {
+            nextQuestion();
+        }
+        else {
+            Toast.makeText(this, "Test complete, you got " + correctAnswers + " questions correct!", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
