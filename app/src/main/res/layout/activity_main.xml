@@ -21,12 +21,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="@string/start_question_header" />
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/start_question_header"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
             android:text="@string/start_question" />
 
         <EditText
@@ -36,12 +40,19 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="32dp"
             android:hint="@string/input_field_hint"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:fontFamily="sans-serif-condensed" />
 
         <TextView
             android:id="@+id/hint_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bsglogo" />
     </LinearLayout>
 
     <LinearLayout
