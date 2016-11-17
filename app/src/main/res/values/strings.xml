@@ -32,7 +32,7 @@
         <item>What famous writer / director said that BSG was their favorite show?</item>
     </string-array>
 
-    <string-array name="correct_answers">
+    <string-array name="correct_answers_array">
         <item>0 / 7 correct</item>
         <item>1 / 7 correct</item>
         <item>2 / 7 correct</item>
@@ -41,6 +41,16 @@
         <item>5 / 7 correct</item>
         <item>6 / 7 correct</item>
         <item>7 / 7 correct</item>
+    </string-array>
+
+    <string-array name="hints_array">
+        <item>Think \'New York\' / \'New England\'</item>
+        <item>Rhymes with \'pain\' in the ass</item>
+        <item>Wife of a well known XO</item>
+        <item>Begins with \'ko\' and ends with \'bol\'</item>
+        <item>Frakkin\' toasters that\'s who!</item>
+        <item>What you do to cobbs of corn before cooking them</item>
+        <item>Think \'Buffy\' / \'Angel\'</item>
     </string-array>
 
     <string name="start_question">What is the name of the settlement on which the cylons attempt to live together with humans?</string>

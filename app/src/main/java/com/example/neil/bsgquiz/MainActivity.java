@@ -14,7 +14,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] questionHeaders, answerKey, questions, correctAnswerString;
+    String[] questionHeaders, answerKey, questions, correctAnswerString, hints;
 
     int correctAnswers = 0;
     int questionCounter = 0;
@@ -28,9 +28,13 @@ public class MainActivity extends AppCompatActivity {
         questionHeaders = res.getStringArray(R.array.question_header_array);
         answerKey = res.getStringArray(R.array.answer_key_array);
         questions = res.getStringArray(R.array.questions_array);
-        correctAnswerString = res.getStringArray(R.array.correct_answers);
+        correctAnswerString = res.getStringArray(R.array.correct_answers_array);
+        hints = res.getStringArray(R.array.hints_array);
     }
 
+    /**
+     *  This method checks if the user's answer is correct, and steps forward to the next question
+     */
 
     public void submitAnswer(View view) {
         //create Edit Text object, and extract user input answer from it
@@ -48,13 +52,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @param questionNumber: what question are we getting a hint for
-     * @return String containing a hint to give to the user
+     *  This method displays a hint when the hint button is pressed
      */
-    private String getHint(int questionNumber) {
-        return "0";
+    public void getHint(View view) {
+        TextView hintTextView = (TextView) findViewById(R.id.hint_text_view);
+        hintTextView.setText(hints[questionCounter]);
     }
 
+    /**
+     *  Encapsulation of stepping forward to next question
+     */
     private void nextQuestion() {
         //step forward question header
         TextView headerText = (TextView) findViewById(R.id.question_header);
@@ -66,11 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
         //reset hint for EditText
         EditText userAnswerEditText = (EditText) findViewById(R.id.answer_text);
-        userAnswerEditText.setHint(R.string.input_field_hint);
+        userAnswerEditText.setText("");
 
         //update correct answer counter
         TextView correctAnswersTextView = (TextView) findViewById(R.id.correct_answer_counter);
         correctAnswersTextView.setText(correctAnswerString[correctAnswers]);
+
+        //reset hint text
+        TextView hintText = (TextView) findViewById(R.id.hint_text_view);
+        hintText.setText("");
 
         questionCounter++;
     }
